@@ -1,0 +1,12 @@
+apply plugin: 'war'
+repositories {
+    mavenCentral()
+}
+
+def akkaVersion = '2.3.12'
+
+dependencies {
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: akkaVersion
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.11', version: akkaVersion
+}
